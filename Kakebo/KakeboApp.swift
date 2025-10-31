@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftData
 
 @main
 struct KakeboApp: App {
@@ -13,5 +14,15 @@ struct KakeboApp: App {
         WindowGroup {
             ContentView()
         }
+        .modelContainer(for: [
+            Transaction.self,
+            Category.self,
+            SubCategory.self,
+            FinancialPeriod.self,
+            SavingGoal.self,
+            SubGoal.self,
+            GamificationProfile.self,
+            Achievement.self
+        ])
     }
 }
